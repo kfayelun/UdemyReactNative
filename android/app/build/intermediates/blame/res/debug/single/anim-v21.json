@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/kristi/Work/UdemyReactNative/rn-course/android/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/kristi/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/849281e033f6fe2b4c1ab64ac057dbc9/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/Users/kristi/Work/UdemyReactNative/rn-course/android/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/kristi/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/849281e033f6fe2b4c1ab64ac057dbc9/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    }
+]
