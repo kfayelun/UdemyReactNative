@@ -95,13 +95,12 @@ def enableProguardInReleaseBuilds = false
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '27.0.3'
+    buildToolsVersion "25.0.1"
 
     defaultConfig {
         applicationId "com.rncourse"
         minSdkVersion 19
         targetSdkVersion 25
-        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative55" // <- See note below for further instruction regarding compatibility with other React Native versions
         versionCode 1
         versionName "1.0"
         ndk {
@@ -122,10 +121,6 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
@@ -141,20 +136,9 @@ android {
     }
 }
 
-configurations.all {
-    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
-        def requested = details.requested
-        if (requested.group == 'com.android.support' && requested.name != 'multidex') {
-            details.useVersion "25.4.0" // <- Change this to whatever version you're using
-        }
-    }
-}
-
-
 dependencies {
     compile fileTree(dir: "libs", include: ["*.jar"])
-    compile "com.android.support:appcompat-v7:25.4.0"
-    compile "com.android.support:design:25.4.0"
+    compile "com.android.support:appcompat-v7:25.3.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
     compile project(':react-native-vector-icons')
     compile project(':react-native-navigation')

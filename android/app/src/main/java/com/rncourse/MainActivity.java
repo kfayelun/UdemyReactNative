@@ -1,8 +1,6 @@
 package com.rncourse;
+import com.reactnativenavigation.controllers.SplashActivity;
 
-import com.facebook.react.ReactActivity;
-import com.reactnativenavigation.NavigationActivity;
-
-public class MainActivity extends NavigationActivity {
+public class MainActivity extends SplashActivity {
 
 }

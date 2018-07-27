@@ -1,4 +1,0 @@
-#Thu Jul 26 15:36:23 CEST 2018
-base.0=/Users/kristi/Work/UdemyReactNative/rn-course/android/app/build/intermediates/transforms/dexMerger/debug/0
-path.0=classes.dex
-renamed.0=classes.dex
