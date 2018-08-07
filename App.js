@@ -10,6 +10,9 @@ import PlaceDetailScreen from "./src/screens/PlaceDetail/PlaceDetail";
 import SideDrawer from "./src/screens/SideDrawer/SideDrawer";
 
 const store = configureStore();
+// header search path
+// $(SRCROOT)/../../react-native/React/** $(SRCROOT)/../../react-native/Libraries/Image
+
 // register screens
 Navigation.registerComponent(
   "awesome-places.AuthScreen",
@@ -37,11 +40,13 @@ Navigation.registerComponent(
 );
 Navigation.registerComponent(
   "awesome-places.SideDrawer",
-  () => SideDrawer
+  () => SideDrawer,
+  store,
+  Provider
 );
 
 // start App
-Navigation.startSingleScreenApp({
+export default () => Navigation.startSingleScreenApp({
   screen: {
     screen: "awesome-places.AuthScreen",
     title: "Login"
